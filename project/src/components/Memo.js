@@ -43,6 +43,8 @@ function Memo() {
                         }}>취소</button>
                     </li>
                 </ul>
+
+                <div></div>
             </div>
 
         )
