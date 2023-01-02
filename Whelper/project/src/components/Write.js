@@ -14,6 +14,7 @@ function Write() {
         <div className='common_page'>
             <div className='content_area'>
                 <div className=''>
+                    <div>test</div>
                     <div></div>
                     {
                         WriteListData.map(function (a, i) {
