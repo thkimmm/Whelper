@@ -19,12 +19,14 @@ function Write() {
 
                             return (
                                 
-                                <div className='WriteDiv' key={i}>
+                                <div className='WriteDiv' key={i}> 
 
                                     <WriteList WriteListData={WriteListData[i]} i={i}></WriteList>
+
                                 </div>
                             
                             )
+                            
                         })
                     }
 
