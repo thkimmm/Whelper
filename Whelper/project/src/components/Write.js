@@ -13,8 +13,14 @@ function Write() {
 
         <div className='common_page'>
             <div className='content_area'>
+                div
+                div
+                div
+                div
+                div
+                div
                 <div className=''>
-                    <div></div>
+
                     {
                         WriteListData.map(function (a, i) {
 
