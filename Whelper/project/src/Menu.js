@@ -2,12 +2,8 @@ import React from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import {
-    BrowserRouter as Router,
-    Switch,
     Route,
     Routes,
-    Link,
-    NavLink,
     useLocation
 } from "react-router-dom";
 
@@ -16,9 +12,7 @@ import './css/header.css';
 
 import List from './components/List'
 import Memo from './components/Memo'
-// import View from './components/View'
 import Write from './components/Write'
-// import Correct from './components/Correct'
 import Side from './components/Side'
 import Search from './components/Search'
 
