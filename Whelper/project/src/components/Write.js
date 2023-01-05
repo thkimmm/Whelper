@@ -3,7 +3,7 @@ import WriteContentData from '../data'
 import View from './View.js'
 
 import '../css/components.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, NavLink, Routes, useParams, useNavigate, Outlet, useLocation } from 'react-router-dom';
 
 function Write() {
 
@@ -13,25 +13,29 @@ function Write() {
 
         <div className='common_page'>
             <div className='content_area'>
-                <div className=''>
-                    <div></div>
-                    {
-                        WriteListData.map(function (a, i) {
 
-                            return (
-                                
-                                <div className='WriteDiv' key={i}> 
+                <Routes>
+                    <Route path="/" element={
 
-                                    <WriteList WriteListData={WriteListData[i]} i={i}></WriteList>
+                        <>
 
-                                </div>
-                            
-                            )
+                            {
+                                WriteListData.map(function (a, i) {
+                                    return (
+                                        <div className='WriteDiv' key={i}>
+                                            <WriteList WriteListData={WriteListData[i]} i={i}></WriteList>
+                                        </div>
+                                    )
+                                })
+                            }
 
-                        })
-                    }
+                        </>
 
-                </div>
+                    } />
+
+                    <Route path="/components/View/:id" element={<View WriteListData={WriteListData} />} />
+                </Routes>
+
             </div>
         </div>
 
@@ -41,25 +45,23 @@ function Write() {
 
 function WriteList(props) {
 
-    const location = useLocation();
+    let navigate = useNavigate();
 
     return (
 
         <div>
 
-            {/* <Routes location={location}>
-                <Route path="./View/:id" element={<View />}> */}
-                    <div className='write_list'>
-                        <div className='write_list_btn'>
-                            <button></button>
-                            <button></button>
-                        </div>
-                        <span>{props.WriteListData.title}</span>
-                        <strong>{props.WriteListData.subTitle}</strong>
-                        <p>{props.WriteListData.content}</p>
+            <NavLink onClick={() => navigate('/components/View/:id')}>
+                <div className='write_list'>
+                    <div className='write_list_btn'>
+                        <button></button>
+                        <button></button>
                     </div>
-                {/* </Route>
-            </Routes> */}
+                    <span>{props.WriteListData.title}</span>
+                    <strong>{props.WriteListData.subTitle}</strong>
+                    <p>{props.WriteListData.content}</p>
+                </div>
+            </NavLink>
 
         </div>
 

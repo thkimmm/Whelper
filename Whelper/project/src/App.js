@@ -2,13 +2,7 @@ import React from 'react';
 // import type { FC } from "react";
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
-  Link,
   NavLink,
-  useLocation
 } from "react-router-dom";
 
 import './css/App.css';

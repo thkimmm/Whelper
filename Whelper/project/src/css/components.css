@@ -310,9 +310,6 @@
     text-align: justify;
 }
 
-
-
-
 /* main memo textarea */
 
 .Main_memo_textarea {
@@ -359,3 +356,7 @@
 /* textarea scroll custom */
 
 /* end :: Memo */
+
+.View_page {
+    color: #fff;
+}
